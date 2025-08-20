@@ -1,0 +1,63 @@
+Harika seçim! 🍔🍕
+Bu proje, React + JavaScript yeteneklerini state yönetimi, kullanıcı etkileşimi ve dinamik hesaplama ile göstermek için mükemmel.
+
+Ben sana adım adım özellik ve yapı planı çıkartayım:
+
+📌 Temel Özellikler
+
+Menü Listesi
+
+Her ürün: isim, açıklama, fiyat, görsel.
+
+Kart veya tablo şeklinde gösterim.
+
+Ürünler JSON veya JS objesi olarak saklanabilir.
+
+Sepete Ekleme
+
+“Sepete Ekle” butonu her üründe.
+
+Eklenen ürünler state ile tutulur (React useState).
+
+Aynı üründen birden fazla eklenebilir.
+
+Sepet Görüntüleme
+
+Sepet açılır veya ayrı sayfa/modal.
+
+Ürünler listelenir: isim, adet, toplam fiyat.
+
+Ürün çıkarma ve adet artırma/azaltma butonları.
+
+Toplam Fiyat Hesaplama
+
+Sepetteki tüm ürünlerin fiyatlarının toplamı.
+
+Dinamik olarak değişir.
+
+🎨 Tasarım / UX Önerileri
+
+Bootstrap Cards ile menü gösterimi.
+
+Sepet için modal veya sidebar kullanabilirsin.
+
+Sepet boşsa “Sepetiniz boş” mesajı göster.
+
+Ürün eklenince animasyon veya toast mesajı (örn. “Pizza sepete eklendi!”).
+
+⚡ Ekstra Özellikler (Portföyde fark yaratır)
+
+Ürünleri kategoriye göre filtreleme (Pizza, Burger, Tatlı…).
+
+Arama çubuğu (ürün adıyla arama).
+
+Sepet bilgisi LocalStorage ile saklanabilir (sayfa yenilense bile).
+
+Checkout form (isim, adres, telefon) — mail veya alert ile test edilebilir.
+
+Ürün fiyatları üzerinde indirim veya kampanya simülasyonu.
+
+💡 Tavsiye:
+Projeyi önce menü listesi + sepete ekleme + toplam hesaplama ile başlat.
+Sonra filtre, arama ve checkout gibi ekstra özellikleri ekle.
+Bu şekilde proje hem bitmiş hem de adım adım geliştirilebilir olur.
