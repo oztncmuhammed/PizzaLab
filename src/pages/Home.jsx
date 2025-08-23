@@ -1,12 +1,17 @@
 import ProductList from "../components/ProductList";
+import SearchBar from "../components/SearchBar";
+import Slider from "../components/Slider";
 
-function Home({ addToBasket, removeFromBasket }) {
+function Home({ addToBasket, removeFromBasket, query, setQuery }) {
   return (
     <div>
-      <h1 className="text-center mt-4">Burger Menü</h1>
+      <Slider />
+      <h1 className="text-center mt-4">Pizza Menu</h1>
+      <SearchBar setQuery={setQuery} />
       <ProductList
         addToBasket={addToBasket}
         removeFromBasket={removeFromBasket}
+        query={query}
       />
     </div>
   );

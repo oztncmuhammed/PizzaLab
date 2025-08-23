@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="bg-dark text-light py-4 mt-5">
       <div className="container text-center">
@@ -11,17 +13,29 @@ function Footer() {
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-light text-decoration-none">
+                <a
+                  href="#"
+                  className="text-light text-decoration-none"
+                  onClick={() => navigate("/home")}
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-light text-decoration-none">
+                <a
+                  href="#"
+                  className="text-light text-decoration-none"
+                  onClick={() => navigate("/about")}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-light text-decoration-none">
+                <a
+                  href="#"
+                  className="text-light text-decoration-none"
+                  onClick={() => navigate("/contact")}
+                >
                   Contact
                 </a>
               </li>

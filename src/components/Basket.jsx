@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 function Basket({ basketItemCount }) {
-  console.log("Basket count:", basketItemCount);
+  const navigate = useNavigate();
+
   return (
     <button
       type="button"
       className="fs-4"
       style={{ border: "none", background: "transparent" }}
+      onClick={() => navigate("/basket")}
     >
       <i className="bi bi-cart"></i>
       {basketItemCount > 0 && (

@@ -1,14 +1,18 @@
 import Basket from "../components/Basket";
+import BasketList from "../pages/BasketList";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ basketItemCount }) {
+  const navigate = useNavigate();
+
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary"
+      className="navbar navbar-expand-lg bg-body-tertiary m-"
       style={{ backgroundColor: "#000000ff" }}
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Burgerlab
+          PizzaLab
         </a>
         <button
           className="navbar-toggler"
@@ -27,21 +31,35 @@ function Navbar({ basketItemCount }) {
         >
           <ul className="navbar-nav mb-2 mb-lg-0 d-flex flex-row">
             <li className="nav-item mx-3">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a
+                className="nav-link active"
+                href="#"
+                aria-current="page"
+                onClick={() => navigate("/home")}
+              >
                 Home
               </a>
             </li>
             <li className="nav-item mx-3">
-              <a className="nav-link" href="#">
-                Sepet
+              <a
+                className="nav-link active"
+                href="#"
+                onClick={() => navigate("/about")}
+              >
+                About
               </a>
             </li>
-            <li className="nav-item mx-3">
-              <a className="nav-link disabled" aria-disabled="true">
-                Menu
+            <li className="nav-item active mx-3">
+              <a
+                className="nav-link "
+                href="#"
+                aria-disabled="false"
+                onClick={() => navigate("/contact")}
+              >
+                Contact
               </a>
             </li>
-            <Basket basketItemCount={basketItemCount} />
+            <Basket basketItemCount={basketItemCount} onclick={BasketList} />
           </ul>
         </div>
       </div>

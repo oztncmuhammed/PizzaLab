@@ -1,10 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/NavbarTemp";
 import Home from "./pages/Home";
+import BasketList from "./pages/BasketList";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const [basketItems, setBasketItems] = useState([]);
+  const [query, setQuery] = useState("");
 
   const addToBasket = (product) => {
     setBasketItems((prev) => {
@@ -43,14 +48,41 @@ function App() {
 
   return (
     <>
-      <Navbar
-        basketItemCount={basketItems.reduce(
-          (total, item) => total + item.quantity,
-          0
-        )}
-      />
-      <Home addToBasket={addToBasket} removeFromBasket={removeFromBasket} />
-      <Footer />
+      <BrowserRouter>
+        <Navbar
+          basketItemCount={basketItems.reduce(
+            (total, item) => total + item.quantity,
+            0
+          )}
+        />
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <Home
+                addToBasket={addToBasket}
+                removeFromBasket={removeFromBasket}
+                query={query}
+                setQuery={setQuery}
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/basket"
+            element={
+              <BasketList
+                basketItems={basketItems}
+                onAddToBasket={addToBasket}
+                onRemoveFromBasket={removeFromBasket}
+              />
+            }
+          />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
