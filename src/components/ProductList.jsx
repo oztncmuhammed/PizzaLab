@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import data from "../Data/data.js";
 
-function ProductList({ addToBasket, removeFromBasket, query }) {
+function ProductList({ addToBasket, removeFromBasket, query, data }) {
   const filtredProducts = data.filter((product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
   );

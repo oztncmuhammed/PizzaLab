@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import BasketList from "./pages/BasketList";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const [basketItems, setBasketItems] = useState([]);
@@ -79,6 +81,8 @@ function App() {
               />
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
 
         <Footer />

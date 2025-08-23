@@ -1,6 +1,8 @@
+import Profile from "./Profile";
 import Basket from "../components/Basket";
 import BasketList from "../pages/BasketList";
 import { useNavigate } from "react-router-dom";
+import Login from "../pages/Login";
 
 function Navbar({ basketItemCount }) {
   const navigate = useNavigate();
@@ -51,7 +53,7 @@ function Navbar({ basketItemCount }) {
             </li>
             <li className="nav-item active mx-3">
               <a
-                className="nav-link "
+                className="nav-link active "
                 href="#"
                 aria-disabled="false"
                 onClick={() => navigate("/contact")}
@@ -60,6 +62,7 @@ function Navbar({ basketItemCount }) {
               </a>
             </li>
             <Basket basketItemCount={basketItemCount} onclick={BasketList} />
+            <Profile onclick={Login} />
           </ul>
         </div>
       </div>

@@ -14,9 +14,6 @@ function SearchBar({ setQuery, query }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="btn btn-dark rounded-pill" type="submit">
-          Search
-        </button>
       </form>
     </div>
   );
