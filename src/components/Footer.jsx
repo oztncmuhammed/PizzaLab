@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className="bg-dark text-light py-4 mt-auto">
       <div className="container text-center">
         <div className="row">
           <div className="col-md-6 mb-3 mb-md-0">
@@ -28,15 +28,6 @@ function Footer() {
                   onClick={() => navigate("/about")}
                 >
                   About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-light text-decoration-none"
-                  onClick={() => navigate("/contact")}
-                >
-                  Contact
                 </a>
               </li>
             </ul>

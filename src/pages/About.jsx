@@ -1,14 +1,15 @@
+import React from "react";
+import aboutslider from "../assets/aboutslider.jpg";
+
 function About() {
+  // About sayfası içeriğine bir slider atanacak.
   return (
-    <div className="col-6 offset-3 mt-4">
-      <h1 className="text-center mt-4">About Us</h1>
-      <p>
-        At PizzLab, we are passionate about crafting authentic, mouth-watering
-        pizzas made from the freshest ingredients. From our hand-tossed dough to
-        our rich, flavorful sauces, every pizza is prepared with care and love.
-        Whether you’re craving a classic Margherita or a gourmet specialty, we
-        bring the taste of Italy right to your plate.
-      </p>
+    <div id="singleSlider" className="carousel slide " data-bs-ride="carousel">
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img src={aboutslider} className="d-block w-100" alt="Slider" />
+        </div>
+      </div>
     </div>
   );
 }

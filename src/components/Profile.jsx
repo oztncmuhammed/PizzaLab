@@ -8,7 +8,7 @@ function Profile() {
       type="button"
       className="fs-4"
       style={{ border: "none", background: "transparent" }}
-      onClick={() => navigate("/profile")}
+      onClick={() => navigate("/login")}
     >
       <i className="bi bi-person ms-1"></i>
     </button>

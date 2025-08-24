@@ -24,19 +24,19 @@ function SignUp() {
           </div>
           <div className="mb-3">
             <label htmlFor="registerEmail" className="form-label">
-              E-posta
+              E-mail
             </label>
             <input
               type="email"
               className="form-control"
               id="registerEmail"
-              placeholder="ornek@mail.com"
+              placeholder="example@gmail.com"
               required
             />
           </div>
           <div className="mb-3">
             <label htmlFor="registerPassword" className="form-label">
-              Şifre
+              Password
             </label>
             <input
               type="password"

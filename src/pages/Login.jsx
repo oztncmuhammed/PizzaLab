@@ -12,20 +12,20 @@ function Login() {
         <form>
           <div className="mb-3">
             <label htmlFor="loginEmail" className="form-label">
-              E-posta
+              E-mail
             </label>
             <input
               type="email"
               className="form-control rounded-pill"
               id="loginEmail"
-              placeholder="ornek@mail.com"
+              placeholder="example@gmail.com"
               required
             />
           </div>
 
           <div className="mb-3">
             <label htmlFor="loginPassword" className="form-label">
-              Şifre
+              Password
             </label>
             <input
               type="password"
@@ -48,8 +48,7 @@ function Login() {
           Hesabın yok mu?{" "}
           <a
             href="#"
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={() => {
               navigate("/signup");
             }}
           >

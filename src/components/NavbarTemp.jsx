@@ -51,16 +51,7 @@ function Navbar({ basketItemCount }) {
                 About
               </a>
             </li>
-            <li className="nav-item active mx-3">
-              <a
-                className="nav-link active "
-                href="#"
-                aria-disabled="false"
-                onClick={() => navigate("/contact")}
-              >
-                Contact
-              </a>
-            </li>
+
             <Basket basketItemCount={basketItemCount} onclick={BasketList} />
             <Profile onclick={Login} />
           </ul>
