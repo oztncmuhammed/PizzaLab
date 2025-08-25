@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/NavbarTemp";
@@ -58,6 +58,8 @@ function App() {
           )}
         />
         <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+
           <Route
             path="/home"
             element={
