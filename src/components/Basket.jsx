@@ -4,6 +4,8 @@ import IconButton from "@mui/material/IconButton";
 import Badge, { badgeClasses } from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { BasketContext } from "../context/BasketContext";
 
 // Badge konumunu biraz yukarı ve sağa alıyoruz
 const CartBadge = styled(Badge)`
@@ -13,7 +15,8 @@ const CartBadge = styled(Badge)`
   }
 `;
 
-export default function Basket({ basketItemCount }) {
+export default function Basket() {
+  const { basketItemCount } = useContext(BasketContext);
   const navigate = useNavigate();
 
   return (

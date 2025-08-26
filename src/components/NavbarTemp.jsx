@@ -4,7 +4,7 @@ import BasketList from "../pages/BasketList";
 import { useNavigate } from "react-router-dom";
 import Login from "../pages/Login";
 
-function Navbar({ basketItemCount }) {
+function Navbar() {
   const navigate = useNavigate();
 
   return (
@@ -52,7 +52,7 @@ function Navbar({ basketItemCount }) {
               </a>
             </li>
 
-            <Basket basketItemCount={basketItemCount} onclick={BasketList} />
+            <Basket onclick={BasketList} />
             <Profile onclick={Login} />
           </ul>
         </div>

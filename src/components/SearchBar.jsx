@@ -1,4 +1,9 @@
-function SearchBar({ setQuery, query }) {
+import { useContext } from "react";
+import { QueryContext } from "../context/QueryContext";
+
+function SearchBar() {
+  const { query, setQuery } = useContext(QueryContext);
+
   return (
     <div className="d-flex justify-content-center my-4">
       <form

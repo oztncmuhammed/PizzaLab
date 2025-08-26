@@ -5,8 +5,13 @@ import data from "../Data/data.js";
 import { useState, useEffect } from "react";
 import Pagination from "@mui/material/Pagination";
 import Box from "@mui/material/Box";
+import { useContext } from "react";
+import { BasketContext } from "../context/BasketContext";
+import { QueryContext } from "../context/QueryContext";
 
-function Home({ addToBasket, removeFromBasket, query, setQuery }) {
+function Home() {
+  const { removeFromBasket, addToBasket } = useContext(BasketContext);
+  const { query, setQuery } = useContext(QueryContext);
   const [selectedCategory, setSelectedCategory] = useState("pizza");
 
   const [page, setPage] = useState(1);
@@ -84,7 +89,6 @@ function Home({ addToBasket, removeFromBasket, query, setQuery }) {
           page={page}
           onChange={handleChangePage}
           color="primary"
-          setSelectedCategory={setSelectedCategory}
         />
       </div>
     </div>

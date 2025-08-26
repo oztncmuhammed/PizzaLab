@@ -6,8 +6,7 @@ function Footer() {
       <div className="container text-center">
         <div className="row">
           <div className="col-md-6 mb-3 mb-md-0">
-            <h5>Footer Content</h5>
-            <p>Some description about your website or company.</p>
+            <h5>PizzaLab</h5>
           </div>
           <div className="col-md-6">
             <h5>Links</h5>

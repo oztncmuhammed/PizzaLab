@@ -1,10 +1,13 @@
 import ProductCard from "../components/ProductCard";
 import data from "../Data/data.js";
+import { useContext } from "react";
+import { BasketContext } from "../context/BasketContext";
+import { QueryContext } from "../context/QueryContext";
 
-function ProductList({ addToBasket, removeFromBasket, query, data }) {
-  const filtredProducts = data.filter((product) =>
-    product.name.toLowerCase().includes(query.toLowerCase())
-  );
+function ProductList({ data }) {
+  const { removeFromBasket, addToBasket } = useContext(BasketContext);
+  const { query } = useContext(QueryContext);
+
   return (
     <div className="container">
       <div className="row">
