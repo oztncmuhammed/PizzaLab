@@ -43,4 +43,4 @@ function Basket({ basketItems, onAddToBasket, onRemoveFromBasket }) {
   );
 }
 
-export default Basket;
+export default Basketlist;

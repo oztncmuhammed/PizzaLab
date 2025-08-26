@@ -1,5 +1,4 @@
 import ProductCard from "../components/ProductCard";
-import data from "../Data/data.js";
 import { useContext } from "react";
 import { BasketContext } from "../context/BasketContext";
 import { QueryContext } from "../context/QueryContext";
